@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <div><i class="fa fa-bell" aria-hidden="true"></i> &nbsp; <p>MOXEY</p></div>
+        
+    </nav>
+    <div id="container" class="container">
+      <!-- Side options -->
+      <div class="side_option">
+        <div>
+          <i class="fa fa-home" aria-hidden="true"></i><span>Dashbord</span>
+        </div>
+        <div>
+          <i class="fa fa-train" aria-hidden="true"></i>
+          <span>Transporter</span>
+        </div>
+        <div>
+            <i class="fa fa-users" aria-hidden="true"></i>
+          <span>Merchant</span>
+        </div>
+        <div>
+            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+          <span>Cards</span>
+        </div>
+        <div>
+            <i class="fa fa-user-secret" aria-hidden="true"></i>
+          <span>Drivers</span>
+        </div>
+        <div>
+            <i class="fa fa-file" aria-hidden="true"></i>
+          <span>Bulk Operation</span>
+        </div>
+        <div>
+            <i class="fa fa-bug" aria-hidden="true"></i>
+          <span>Reporting</span>
+        </div>
+        <div>
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+          <span>Requests</span>
+        </div>
+        <div>
+            <i class="fa fa-arrows" aria-hidden="true"></i>
+          <span>Admin Services</span>
+        </div>
+        <div class="admin">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            <div>
+              <div>
+          <p>MD Asharuddin</p>
+          <p>Adminatrator</p>
+        </div>
+        </div>
+        </div>
+      </div>
+      <!-- Driver Menu -->
+      <div class="content">
+        <!-- upper content graph and data of all drivers -->
+        <div class="graph" >
+            <div class="graphBar">
+                <h2>Drivers</h2>
+            <img src="./Screenshot 2023-04-20 100015.png" alt="props" width="400px"/>
+            </div>
+           <div  class="graph_data">
+            <div class="active_driver">
+              <div>Active Driver <h2 >0</h2></div>
+              <div>Inactive Driver <h2>0</h2></div>
+              <div>Inprocess Driver <h2 id="inprocess">0</h2></div>
+              <div>Rejected Driver <h2>0</h2></div>
+            </div>
+            <div class="add_driver">
+               <button onclick="show()">Add Driver ></button>
+              <div>
+                Total Driver
+                <h2 id="total_driver">0</h2>
+              </div>
+            </div>
+           </div>
+        </div>
+        <div class="all_driver" >
+           <div class="heading">
+            <span>Status</span>
+            <span>Moxey ID</span>
+            <span>Transporter</span>
+            <span>Driver Name(EN)</span>
+            <span>Driver Name(AR)</span>
+            <span>Mobile No.</span>
+            <span>External Customer ID</span>
+            <span>Card No.</span>
+            <span>Actions</span>
+           </div>
+           <div id="userDetails">
+
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- form -->
+      <div class="form" id="form">
+    <div class="formHead">
+      <h2>ADD NEW DRIVER</h2> 
+      <i onclick="hide()" class="fa fa-times" aria-hidden="true"></i>
+    </div>
+
+    <div class="selection">
+      <div>
+    <label for="country_main">Country:</label>
+    <select id="country_main" name="country_name"></select>
+  </div>
+
+    <div class="type_user">
+    <p >User Type</p>
+    <span class="radio">
+      <span>
+    <input id="driver" name="user" type="radio"/>
+    <label for="driver">Driver</label>
+  </span>
+<span>
+    <input  id="broker"  name="user" type="radio"/>
+    <label for="broker">Broker & Driver</label>
+  </span>
+    </span>
+  </div>
+  </div>
+  <section >
+    <h3 class="section">Presnol Details</h3>
+    <form id="userForm" onsubmit="submit_form(event)">
+      <div class="photo_container">
+      <div class="photo">
+
+      </div>
+      <div class="personal_detail">
+      <div>
+      <label for="f_name">First Name *</label><br/>
+      <input type="text" id="f_name" name="f_name" />
+    </div>
+    <div>
+      <label for="m_name">Middle Name</label><br/>
+      <input type="text" id="m_name" name="m_name" />
+    </div>
+    <div>
+      <label for="l_name">Last Name *</label><br/>
+      <input type="text" id="l_name" name="l_name" />
+    </div>
+    <div>
+      <label for="gender">Gender *</label><br/>
+      <select id="gender" name="gender">
+        <option value=""></option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+<div>
+      <label for="f_name_arabic">First Name (Arabic)</label><br/>
+      <input type="text" id="f_name_arabic" name="f_name_arabic" />
+    </div>
+    <div>
+      <label for="m_name_arabic">Middle Name (Arabic)</label><br/>
+      <input type="text" id="m_name_arabic" name="m_name_arabic" />
+    </div>
+    <div>
+      <label for="l_name_arabic">Last Name (Arabic)</label><br/>
+      <input type="text" id="l_name_arabic" name="l_name_arabic" />
+    </div>
+    <div>
+      <label for="d_o_b">Date of Birth *</label><br/>
+      <input type="date" id="d_o_b" name="d_o_b" />
+    </div>
+    <div>
+      <label for="mobile">Mobile Number *</label><br/>
+      <input type="tel" id="mobile" name="mobile" />
+    </div>
+    <div>
+      <label for="nation">Nationality *</label><br/>
+      <input type="text" id="nation" name="nation" />
+    </div>
+    <div>
+      <label for="country_birth">Country of Birth *</label><br/>
+      <select id="country_birth" name="country_birth"></select>
+    </div>
+    <div>
+      <label for="city_birth">City of Birth *</label><br/>
+      <select id="city_birth" name="city_birth"></select>
+    </div>
+
+  </div> 
+</div>
+  <!--  -->
+    </section>
+<!-- card name input -->
+    <div class="card_name_div">
+      <label for="card_name">Name on Card *</label><br/>
+      <input type="text" id="card_name" name="card_name" />
+    </div>
+<!-- Present Address -->
+<h3 class="section">Present Address</h3>
+      <div class="present_address">
+        <div>
+      <label for="street_name">Street Name *</label><br />
+      <input type="text" id="street_name" name="street_name" />
+    </div>
+    <div>
+      <label for="country_name">Country *</label><br />
+      <select id="country_name" name="country_name"></select>
+    </div>
+    <div>
+      <label for="city_name">City *</label> <br />
+      <select id="city_name" name="city_name"></select>
+    </div>
+    <div>
+      <label for="zip">Zip Code *</label><br/>
+      <input type="text" id="zip" name="zip" />
+    </div>
+    </div>
+    <div class="btn">
+      <button onclick="hide()" class="cancel">Cancel</button>
+      <button class="submit" type="submit">Send</button>
+    </div>
+    </form>
+
+  </div>
+  
+      <script src="index.js"></script>
+  </body>
+</html>
