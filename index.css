@@ -19,11 +19,11 @@
 }
 .container {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 90vh;
 }
 .side_option {
-  border: 1px solid;
+  /* border: 1px solid; */
   flex: 1;
   padding: 3rem;
   line-height: 3rem;
@@ -48,23 +48,23 @@
 }
 .content {
   flex: 4;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   /* padding: 1rem; */
 }
 
 .graph{
-border: 1px solid red;
+/* border: 1px solid red; */
 height: 35vh;
 display: flex;
 padding: 1rem;
 }
 .graph_data{
     flex: 2;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
 }
 .active_driver{
-    border: 1px solid blue;
+    /* border: 1px solid; */
     height: 30vh;
     flex: 2;
     display: grid;
@@ -73,7 +73,7 @@ padding: 1rem;
 }
 .add_driver{
     flex: 1;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 30vh;
     display: flex;
     flex-direction: column;
@@ -97,13 +97,13 @@ padding: 1rem;
 }
 .graphBar{
     flex: 1.5;
-    border: 1px solid rgb(17, 0, 255);
+    /* border: 1px solid rgb(17, 0, 255); */
     text-align: center;
  
 }
 
 .all_driver{
-border: 1px solid rgb(82, 82, 5);
+/* border: 1px solid rgb(82, 82, 5); */
 height: 55vh;
 }
 
@@ -121,7 +121,7 @@ height: 55vh;
 #user_render{
     padding: 0rem 1.2rem; 
   text-align: center;
-  border: 1px solid rgb(0, 0, 0);
+  /* border: 1px solid rgb(0, 0, 0); */
 }
 #user_render span{
     /* border: 1px solid blue; */
@@ -132,7 +132,7 @@ height: 55vh;
     display: none;
     width: 60%;
     border: 1px solid blue;
- height: 98vh;
+ height: fit-content;
  position: absolute;
  top: 2vh;
  left: 20vw;
